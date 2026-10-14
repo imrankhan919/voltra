@@ -1,0 +1,21 @@
+ body {
+     background-color: #1B1D20;
+     background-image: radial-gradient(rgba(255, 255, 255, .19) 1px, transparent 1px);
+     background-size: 16px 16px;
+ }
+
+ .swatch-strip {
+     background-image: linear-gradient(to right,
+             #05070A 0%, #05070A 8.33%,
+             var(--swatch-1) 8.33%, var(--swatch-1) 16.66%,
+             var(--swatch-2) 16.66%, var(--swatch-2) 24.99%,
+             var(--swatch-3) 24.99%, var(--swatch-3) 33.32%,
+             var(--swatch-4) 33.32%, var(--swatch-4) 41.65%,
+             var(--swatch-5) 41.65%, var(--swatch-5) 49.98%,
+             var(--swatch-6) 49.98%, var(--swatch-6) 58.31%,
+             var(--swatch-7) 58.31%, var(--swatch-7) 66.64%,
+             var(--swatch-8) 66.64%, var(--swatch-8) 74.97%,
+             var(--swatch-9) 74.97%, var(--swatch-9) 83.3%,
+             var(--swatch-10) 83.3%, var(--swatch-10) 91.63%,
+             var(--swatch-11) 91.63%, var(--swatch-11) 100%);
+ }
