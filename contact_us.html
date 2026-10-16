@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kinetic Volt — Tailwind Theme Playground/contact_us</title>
+
+    <!-- Tailwind CSS CDN (v3 browser CDN). For a quick standalone demo. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: use these font families in Tailwind config below. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kinetic: {
+                            primary: '#00C2E0',
+                            secondary: '#00E676',
+                            tertiary: '#0A0E17',
+                            neutral: '#647488',
+                            canvas: '#1B1D20',
+                            panel: '#E3EDFF',
+                            panelSoft: '#D5E4FF',
+                            ink: '#102033',
+                            muted: '#7D8999',
+                            line: '#C5D8F6'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Sora', 'sans-serif'],
+                        body: ['Hanken Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                    boxShadow: {
+                        glow: '0 0 24px rgba(0, 194, 224, .22)'
+                    },
+                    borderRadius: {
+                        panel: '18px'
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+
+
+    <h1 class="text-6xl font-display text-center">contact-us page</h1>
+    <p>this is a contact-us page</p>
+</body>
+
+</html>
