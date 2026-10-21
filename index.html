@@ -51,18 +51,66 @@
             }
         };
     </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
+    <nav class="py-4 px-8 flex items-center justify-between shadow-xl">
+        <!-- Logo -->
+        <div id=" logo" class="flex items-center justify-center space-x-3">
+            <div class="bg-kinetic-primary h-10 w-10 flex items-center justify-center rounded-md">
+                <i class="fa-solid fa-bolt text-white"></i>
+            </div>
+            <h1 class="text-2xl font-bold font-display">
+                VOLTRA
+            </h1>
+        </div>
 
-    
+        <!-- Menu Items -->
+        <ul class="hidden md:flex items-center space-x-6">
+            <li
+                class="text-sm rounded-sm uppercase font-mono hover:bg-kinetic-primary p-2.5 duration-300 ease-in-out hover:text-white">
+                <a href="#">Models</a>
+            </li>
+            <li
+                class="text-sm rounded-sm uppercase font-mono hover:bg-kinetic-primary p-2.5 duration-300 ease-in-out hover:text-white">
+                <a href="#">Feautures</a>
+            </li>
+            <li
+                class="text-sm rounded-sm uppercase font-mono hover:bg-kinetic-primary p-2.5 duration-300 ease-in-out hover:text-white">
+                <a href="#">Specs</a>
+            </li>
+            <li
+                class="text-sm rounded-sm uppercase font-mono hover:bg-kinetic-primary p-2.5 duration-300 ease-in-out hover:text-white">
+                <a href="#">Gallery</a>
+            </li>
+            <li
+                class="text-sm rounded-sm uppercase font-mono hover:bg-kinetic-primary p-2.5 duration-300 ease-in-out hover:text-white">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+
+        <!-- Profile Section -->
+        <div class="flex items-center justify-center space-x-8">
+            <button
+                class="hidden md:block bg-kinetic-primary p-2 px-6 rounded-md font-semibold font-mono text-white">Book
+                Test
+                Ride</button>
+            <div
+                class="h-8 w-8 bg-kinetic-panel flex items-center justify-center cursor-pointer rounded-full border border-gray-300 hover:border-gray-500 duration-300 ease-in-out">
+                <i class="fa-regular fa-user text-sm"></i>
+            </div>
+        </div>
+
+    </nav>
+
 
     <!-- Hero Section -->
     <div class="p-16 min-h-[90vh] bg-kinetic-panel flex flex-col-reverse md:flex-row items-center justify-center">
 
         <!-- Text Section -->
-        <div class="w-full md:w-2/4">
+        <div data-aos="zoom-in" class="w-full md:w-2/4">
             <div>
                 <p class="font-mono bg-white border border-gray-300 p-1 rounded-full text-center text-sm w-60">2025
                     Hypersport
@@ -89,7 +137,7 @@
         </div>
 
         <!-- Image Section -->
-        <div class="w-full mb-16 md:mb-0 md:w-3/5 flex items-center justify-center">
+        <div data-aos="zoom-in" class="w-full mb-16 md:mb-0 md:w-3/5 flex items-center justify-center">
             <img class="md:ml-8" src="./assets/hero.png" alt="">
         </div>
 
@@ -97,8 +145,40 @@
     </div>
 
 
+    <div class="bg-kinetic-panel px-16 grid grid-cols-1 md:grid-cols-3 gap-3">
+
+        <div data-aos="flip-up" class="p-6 hover:border hover:border-blue-200 bg-white rounded-lg">
+            <div class="flex items-center justify-between my-4">
+                <p class="font-mono text-sm">Terminal Velocity</p>
+                <i class="fa-solid fa-gauge-simple-high text-kinetic-primary text-xl"></i>
+            </div>
+            <h1 class="text-5xl font-body font-bold my-2">320 km/h</h1>
+            <p class="font-body text-sm text-emerald-500 font-bold">Launch Mode Active</p>
+        </div>
+        <div data-aos="flip-up" class="p-6 hover:border hover:border-blue-200 bg-white rounded-lg">
+            <div class="flex items-center justify-between my-4">
+                <p class="font-mono text-sm">Acceleration (0-100 km/h)</p>
+                <i class="fa-solid fa-bolt text-kinetic-primary text-xl"></i>
+            </div>
+            <h1 class="text-5xl font-body font-bold my-2">2.9s</h1>
+            <p class="font-body text-sm text-emerald-500 font-bold">Electronically Governed</p>
+        </div>
+        <div data-aos="flip-up" class="p-6 hover:border hover:border-blue-200 bg-white rounded-lg">
+            <div class="flex items-center justify-between my-4">
+                <p class="font-mono text-sm">Acceleration (0-100 km/h)</p>
+                <i class="fa-solid fa-charging-station text-kinetic-primary text-xl"></i>
+            </div>
+            <h1 class="text-5xl font-body font-bold my-2">2.9s</h1>
+            <p class="font-body text-sm text-emerald-500 font-bold">Launch Mode Active</p>
+        </div>
 
 
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

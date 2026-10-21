@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>VOLTRA - Electric Hypersport</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-tint": "#006879",
+          "error-container": "#ffdad6",
+          "primary-fixed-dim": "#3cd8f6",
+          "on-primary-fixed-variant": "#004e5b",
+          "on-error": "#ffffff",
+          "on-surface-variant": "#475569",
+          "on-surface": "#0b1c30",
+          "on-secondary-container": "#007237",
+          "tertiary-container": "#aeb1be",
+          "on-tertiary": "#ffffff",
+          "inverse-primary": "#3cd8f6",
+          "on-tertiary-fixed": "#181b25",
+          "surface-variant": "#e2e8f0",
+          "on-secondary-fixed": "#00210b",
+          "surface-container": "#eff4ff",
+          "surface-dim": "#cbdbf5",
+          "on-primary": "#ffffff",
+          "on-secondary-fixed-variant": "#005226",
+          "primary": "#006879",
+          "on-tertiary-fixed-variant": "#434751",
+          "secondary-fixed-dim": "#00e475",
+          "on-background": "#0b1c30",
+          "secondary": "#006d35",
+          "primary-fixed": "#a9edff",
+          "tertiary-fixed": "#dfe2ef",
+          "on-tertiary-container": "#40444f",
+          "surface-container-lowest": "#ffffff",
+          "secondary-fixed": "#62ff96",
+          "on-primary-fixed": "#001f26",
+          "primary-container": "#00c2e0",
+          "tertiary-fixed-dim": "#c3c6d3",
+          "secondary-container": "#3fff8b",
+          "on-secondary": "#ffffff",
+          "on-primary-container": "#004b58",
+          "outline-variant": "#e2e8f0",
+          "error": "#ba1a1a",
+          "background": "#f8f9ff",
+          "surface-container-high": "#dce9ff",
+          "surface": "#f8f9ff",
+          "tertiary": "#5a5e69",
+          "inverse-surface": "#213145",
+          "on-error-container": "#93000a",
+          "surface-bright": "#f8f9ff",
+          "inverse-on-surface": "#eaf1ff",
+          "surface-container-highest": "#d3e4fe",
+          "outline": "#6c797d",
+          "surface-container-low": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "margin": "2.5rem",
+          "space-sm": "0.5rem",
+          "gutter": "1.5rem",
+          "space-xl": "2.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem"
+        },
+        "fontFamily": {
+          "display-lg": ["Sora"],
+          "headline-md": ["Sora"],
+          "body-md": ["Hanken Grotesk"],
+          "headline-sm": ["Sora"],
+          "headline-lg-mobile": ["Sora"],
+          "display-xl": ["Sora"],
+          "headline-lg": ["Sora"],
+          "display-xl-mobile": ["Sora"],
+          "body-sm": ["Hanken Grotesk"],
+          "display-lg-mobile": ["Sora"],
+          "body-lg": ["Hanken Grotesk"],
+          "label-md": ["JetBrains Mono"],
+          "label-sm": ["JetBrains Mono"]
+        },
+        "fontSize": {
+          "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+          "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+          "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+          "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+          "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "display-xl-mobile": ["44px", {"lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+          "body-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "display-lg-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+          "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "600"}]
+        }
+      },
+    },
+  }</script></head><body class="bg-background text-on-surface font-body-md text-body-md min-h-screen selection:bg-primary-container selection:text-on-primary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-surface-variant/70 shadow-[0_4px_20px_rgba(0,104,121,0.04)]"><div class="h-20 max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center shadow-md shadow-primary-container/30 text-white"><span class="material-symbols-outlined text-[24px]">electric_bolt</span></div><span class="font-headline-md text-[22px] tracking-wider text-on-surface uppercase font-extrabold">VOLTRA</span></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider" data-path="models" href="#models">Models</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider" data-path="features" href="#features">Features</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider" data-path="specs" href="#specs">Specs</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider" data-path="gallery" href="#gallery">Gallery</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider" data-path="contact" href="#contact">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center h-11 px-space-lg rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-label-md text-label-md font-bold uppercase tracking-wider shadow-[0_4px_16px_rgba(0,194,224,0.35)] hover:shadow-[0_6px_24px_rgba(0,194,224,0.55)] hover:scale-[1.02] transition-all active:scale-[0.98]" data-path="book-test-ride" href="#models">Book Test Ride</a><div class="w-9 h-9 rounded-full bg-surface-container border border-surface-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary-container transition-all cursor-pointer shadow-sm"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full text-on-surface">
+<!-- HERO SECTION -->
+<section class="relative w-full py-space-xl overflow-hidden bg-gradient-to-b from-surface-container-high/30 via-background to-background">
+<div class="absolute -top-32 right-1/4 w-[650px] h-[650px] bg-gradient-to-br from-primary-container/20 to-secondary-container/20 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/2 -left-20 w-[400px] h-[400px] bg-primary-fixed/30 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Hero Content -->
+<div class="lg:col-span-6 flex flex-col items-start gap-space-md z-10">
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-white border border-primary-container/40 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">2025 Hypersport Flagship</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-[1.08]">
+            Silent Power.<br/>
+<span class="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent drop-shadow-sm">Pure Speed.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
+            Zero emissions. Infinite adrenaline. Experience 220 horsepower of instant torque wrapped in an aerospace-grade carbon fiber chassis.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center h-12 px-space-xl rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-label-md text-label-md font-bold uppercase tracking-wider shadow-[0_8px_24px_rgba(0,194,224,0.35)] hover:shadow-[0_12px_32px_rgba(0,194,224,0.5)] hover:scale-[1.02] transition-all active:scale-[0.98]" href="#models">
+              Pre-Order Now
+            </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs h-12 px-space-lg rounded-xl bg-white text-on-surface border border-surface-variant font-label-md text-label-md uppercase tracking-wider shadow-sm hover:border-primary-container hover:bg-surface-container transition-all" href="#specs">
+<span class="material-symbols-outlined text-[20px] text-primary-container">play_circle</span>
+              Watch Video
+            </a>
+</div>
+</div>
+<!-- Right Hero Media -->
+<div class="lg:col-span-6 relative">
+<div class="relative w-full rounded-2xl overflow-hidden bg-slate-950 border border-surface-variant shadow-[0_20px_50px_rgba(0,104,121,0.15)] group">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 aspect-[16/10]" data-alt="Sleek matte black VOLTRA R1 electric hypersport motorcycle parked in a dark cinematic studio with radiant electric cyan neon aerodynamic stripes and rims casting dramatic cyan reflections on a wet asphalt floor" src="https://lh3.googleusercontent.com/aida/AEtjO1VhzyFlpCUdqNXn3K9XxjlDeldWDKpvuTi7I56pQ_jFotB0khoWYvHbPowWfSuFQMfK5L7c3g9ZsgdzjHZ-yQTDsOhGKdEagvHiXRafuSUSGwBYry7Sjv3X_XIstcocf7WxPxSHhWj7QcLImYfWOXBCKogUVmIGECVKwIYrZUkqsp7fSrp6hjnsUDRYqpUR6Cyu4taah_eliIwaUXM1pGG0_Zy9WdtUckKVVA2hg1AF2n2yrP7CSW9qYIA_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between px-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-md border border-white/60 shadow-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Telemetric Unit Live</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">VOLTRA R1 PROTO // 001</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-xl">
+<div class="bg-white rounded-2xl p-space-lg flex flex-col gap-1 border border-surface-variant shadow-[0_8px_20px_rgba(0,104,121,0.06)] hover:border-primary-container hover:shadow-[0_12px_28px_rgba(0,194,224,0.12)] transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Acceleration (0-100 km/h)</span>
+<span class="material-symbols-outlined text-primary-container text-[22px]">speed</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">2.9<span class="text-primary text-headline-md font-headline-md font-bold">s</span></div>
+<span class="font-body-sm text-body-sm text-emerald-600 font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Launch Mode Active</span>
+</div>
+<div class="bg-white rounded-2xl p-space-lg flex flex-col gap-1 border border-surface-variant shadow-[0_8px_20px_rgba(0,104,121,0.06)] hover:border-primary-container hover:shadow-[0_12px_28px_rgba(0,194,224,0.12)] transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Terminal Velocity</span>
+<span class="material-symbols-outlined text-primary-container text-[22px]">bolt</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">320 <span class="text-primary text-headline-md font-headline-md font-bold">km/h</span></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Electronically Governed</span>
+</div>
+<div class="bg-white rounded-2xl p-space-lg flex flex-col gap-1 border border-surface-variant shadow-[0_8px_20px_rgba(0,104,121,0.06)] hover:border-primary-container hover:shadow-[0_12px_28px_rgba(0,194,224,0.12)] transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Total Battery Range</span>
+<span class="material-symbols-outlined text-primary-container text-[22px]">battery_charging_full</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">400 <span class="text-primary text-headline-md font-headline-md font-bold">km</span></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Combined WLTP Cycle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURES SECTION -->
+<section class="w-full py-space-xl bg-surface-container-low" id="features">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-xl gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold bg-primary-container/15 px-3 py-1 rounded-full">Engineered Without Compromise</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">State-of-the-Art Architecture</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision engineered for surgical track precision, algorithmic torque vectoring, and zero loss of rotational inertia.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1 -->
+<div class="bg-white rounded-2xl p-space-lg flex flex-col gap-space-md border border-surface-variant shadow-sm hover:border-primary-container hover:shadow-[0_12px_30px_rgba(0,194,224,0.1)] transition-all">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-fixed to-primary-container/30 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">electric_bolt</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Instant Torque</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct-drive axial flux electric motor delivering 190 Nm torque instantly from 0 RPM without clutch latency.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-2xl p-space-lg flex flex-col gap-space-md border border-surface-variant shadow-sm hover:border-primary-container hover:shadow-[0_12px_30px_rgba(0,194,224,0.1)] transition-all">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-fixed to-primary-container/30 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">flash_on</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Fast Charging</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">800V ultra-fast architecture charges 10% to 80% in just 18 minutes on standard high-output DC fast chargers.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-2xl p-space-lg flex flex-col gap-space-md border border-surface-variant shadow-sm hover:border-primary-container hover:shadow-[0_12px_30px_rgba(0,194,224,0.1)] transition-all">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-fixed to-primary-container/30 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Smart Dashboard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">7-inch antireflective OLED display with real-time lean angle telemetry, lap pacing, and turn-by-turn navigation.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white rounded-2xl p-space-lg flex flex-col gap-space-md border border-surface-variant shadow-sm hover:border-primary-container hover:shadow-[0_12px_30px_rgba(0,194,224,0.1)] transition-all">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-fixed to-primary-container/30 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">autorenew</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Regenerative Braking</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Customizable four-stage kinetic energy recovery extending city commute range by up to 15% with smooth engine-brake simulation.</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-white rounded-2xl p-space-lg flex flex-col gap-space-md border border-surface-variant shadow-sm hover:border-primary-container hover:shadow-[0_12px_30px_rgba(0,194,224,0.1)] transition-all">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-fixed to-primary-container/30 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Carbon Fiber Frame</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Ultra-lightweight carbon fiber monocoque chassis weighing only 18.5 kg with extreme torsional rigidity for surgical line control.</p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white rounded-2xl p-space-lg flex flex-col gap-space-md border border-surface-variant shadow-sm hover:border-primary-container hover:shadow-[0_12px_30px_rgba(0,194,224,0.1)] transition-all">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-fixed to-primary-container/30 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">tune</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Ride Modes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Five intelligent presets: Eco, Urban, Sport, Track, and a completely unrestricted Beast mode with unbridled torque curve.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SHOWCASE SECTION -->
+<section class="w-full py-space-xl bg-background">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Image -->
+<div class="lg:col-span-6 relative">
+<div class="rounded-2xl overflow-hidden bg-slate-950 border border-surface-variant shadow-[0_20px_45px_rgba(0,104,121,0.15)] group">
+<img class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 aspect-[4/3]" data-alt="Macro close-up shot of an electric hypersport motorcycle showing woven carbon fiber swingarm with an illuminated circular electric cyan hub motor, exposed mechanical linkages, and high-performance Brembo brake caliper" src="https://lh3.googleusercontent.com/aida/AEtjO1VrW9ETvcUkD9V1Wwm5qeHPAG_nH82CBsHWeVpDFE6I2yTOS5SNB5laGVDAtmPxa4BxPI8iDRmF5eQfqqGRISgVyEaBLq1YON0rt3JOQF-cdE_z2rTepXaXlX_cehgNZa17IvoDip0fXd-iflgQUds_GzCrX-Uek9oQdYMe2SAWpMnG7ACAwUrKosVU8oqNj76xQwVwnTaZuyG0TXQynW7fa-QmLFfGDHI2ExVhIGQ7ct_XEiyn2wAUbSE"/>
+</div>
+<div class="absolute -bottom-5 -right-5 hidden sm:flex flex-col bg-white border border-surface-variant p-space-md rounded-xl shadow-[0_12px_30px_rgba(0,104,121,0.12)]">
+<span class="font-label-sm text-label-sm uppercase text-primary font-bold tracking-wider">Material Grade</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Toray T1000 Carbon</span>
+</div>
+</div>
+<!-- Right Description -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold bg-primary-container/15 self-start px-3 py-1 rounded-full">Aerodynamics &amp; Chassis</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Sculpted by the Wind, Powered by Electrons.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Derived directly from wind tunnel research in aeronautics. Integrated winglets channel downforce directly onto the front contact patch while cooling ducts optimize thermal dissipation from the high-discharge cell pack.
+          </p>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-start gap-space-sm bg-white p-3.5 rounded-xl border border-surface-variant shadow-xs">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 flex items-center justify-center text-primary shrink-0 mt-0.5 font-bold">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Aerodynamic Downforce Winglets generating 18 kg downforce at 250 km/h</span>
+</div>
+<div class="flex items-start gap-space-sm bg-white p-3.5 rounded-xl border border-surface-variant shadow-xs">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 flex items-center justify-center text-primary shrink-0 mt-0.5 font-bold">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Adaptive Öhlins Smart EC 3.0 semi-active electronic suspension system</span>
+</div>
+<div class="flex items-start gap-space-sm bg-white p-3.5 rounded-xl border border-surface-variant shadow-xs">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 flex items-center justify-center text-primary shrink-0 mt-0.5 font-bold">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Dual Brembo Stylema Monobloc calipers paired with Bosch Cornering ABS Evo</span>
+</div>
+<div class="flex items-start gap-space-sm bg-white p-3.5 rounded-xl border border-surface-variant shadow-xs">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 flex items-center justify-center text-primary shrink-0 mt-0.5 font-bold">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Integrated CyberOS over-the-air firmware updates and live cloud telemetry sync</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SPECS TABLE SECTION -->
+<section class="w-full py-space-xl bg-surface-container-low" id="specs">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-xl gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold bg-primary-container/15 px-3 py-1 rounded-full">Technical Specifications</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Calibrated for the Podium</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Every millimeter engineered for surgical precision and uncompromising electric hypersport dynamics.</p>
+</div>
+<div class="bg-white rounded-3xl p-space-lg md:p-space-xl border border-surface-variant shadow-[0_12px_36px_rgba(0,104,121,0.08)] max-w-4xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col p-space-md rounded-2xl bg-surface-container/60 border border-surface-variant/80 hover:border-primary-container transition-colors">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Powertrain</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1 font-bold">Liquid-Cooled Axial Motor</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold">165 kW / 220 hp output</span>
+</div>
+<div class="flex flex-col p-space-md rounded-2xl bg-surface-container/60 border border-surface-variant/80 hover:border-primary-container transition-colors">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Energy Storage</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1 font-bold">21.8 kWh Lithium-Titanate</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active thermal cooling cycle</span>
+</div>
+<div class="flex flex-col p-space-md rounded-2xl bg-surface-container/60 border border-surface-variant/80 hover:border-primary-container transition-colors">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Charging Architecture</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1 font-bold">18 min DC / 3.2h Level 2</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold">150 kW DC Fast Charge peak</span>
+</div>
+<div class="flex flex-col p-space-md rounded-2xl bg-surface-container/60 border border-surface-variant/80 hover:border-primary-container transition-colors">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Mass &amp; Geometry</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1 font-bold">208 kg Curb Weight</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Balanced 50:50 axle weight distribution</span>
+</div>
+<div class="flex flex-col p-space-md rounded-2xl bg-surface-container/60 border border-surface-variant/80 hover:border-primary-container transition-colors">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Braking Hardware</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1 font-bold">Dual 330mm Brembo Stylema</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Multi-mode Bosch Cornering ABS</span>
+</div>
+<div class="flex flex-col p-space-md rounded-2xl bg-surface-container/60 border border-surface-variant/80 hover:border-primary-container transition-colors">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider font-semibold">Base Configuration Price</span>
+<span class="font-headline-sm text-headline-sm text-primary mt-1 font-bold">$28,500 USD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Excluding local clean vehicle incentives</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- GALLERY SECTION -->
+<section class="w-full py-space-xl bg-background" id="gallery">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold bg-primary-container/15 px-3 py-1 rounded-full">Voltra In Focus</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Beauty in Motion</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Raw mechanical precision meets luminous kinetic design from every vantage point.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Tile 1 -->
+<div class="relative rounded-2xl overflow-hidden bg-slate-900 border border-surface-variant group aspect-[4/3] shadow-[0_8px_20px_rgba(0,104,121,0.08)]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Wide high angle studio view of a futuristic electric superbike with luminous cyan LED light accents outlining its aggressive carbon bodywork in a pristine dark showroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9QfAZowo8erixbwcxk1buAskLh6MeTUaLktprrpmYFEDwyo52JTzouUmImRpceoacgTUJW7yGGo_PCvTdEm8P5_NmOg9UTiBN-XuOKnW9J5ufKELknQkbB7JeM-tj-C0rka_tXvcCXxaPk9Bd35FN7dEIoQxX7tDiszru0Re_sgx53MFmnBi2tkDtOOyCxNxKNvMirNWq9BrlDNMwfX77XkkKM9dzWAVFxLfIsgtZUqcAl-fuZ8Dogg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-sm text-label-sm uppercase text-white font-bold tracking-wider drop-shadow">Aero Profile // Silhouette</span>
+</div>
+</div>
+<!-- Tile 2 -->
+<div class="relative rounded-2xl overflow-hidden bg-slate-900 border border-surface-variant group aspect-[4/3] shadow-[0_8px_20px_rgba(0,104,121,0.08)]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Detailed shot of an electric motorcycle handlebar with clip-on grips and high-definition anti-glare full-color digital cockpit gauge cluster showing battery telemetry and lean angle diagnostics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC51K1iEQvfyvI2n3soUbdCpClOkr8PoKPNaUsdSxphcMCFrH5lymv0iGZF-t3uiHDQgFVnKecNxjXcoiEo1L-S7WDU3iQZO4TkMrYxvBZCUDf_jtdLoyu1LxhdZx18B4jvfjhDocc66dnr26blIZBcHkLlkAiIVfF8Btd0kWaDJIoQ1SWjK8tzHMfIxTV8QMyN5KxCkqXJsARjde6XZdpD98-rNT285i0zGWARaoXWhUChjUcRbBRc8g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-sm text-label-sm uppercase text-white font-bold tracking-wider drop-shadow">CyberOS 7-inch Telemetry Display</span>
+</div>
+</div>
+<!-- Tile 3 -->
+<div class="relative rounded-2xl overflow-hidden bg-slate-900 border border-surface-variant group aspect-[4/3] shadow-[0_8px_20px_rgba(0,104,121,0.08)]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of rear swingarm with exposed carbon fiber structure and glowing electric cyan cooling channel highlights on an electric hypersport motorcycle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6G4zez1DN6P0YKBFwwVbyT1akHKKTt5ZpeqDOOcUTI3Ip5G5RCgdU4AEDWRqGvLuxXwK2NGErXeOvjhKXRi54iToDw1UnmbD9xfw2Bsg1mX04ANOvgBhxQQAKzLCXxbUzMnZiq3rQ_RyYV5XUTKJ_7nygY36cW3e96xgNpB44FdophTa6LcfWM3HUgq054A_EtpxRHHJcw5-6sEljAX98rKwlZXhi-YD1W5oOiwTFMAw8ii8Dx2swcQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-sm text-label-sm uppercase text-white font-bold tracking-wider drop-shadow">Carbon Monocoque Swingarm</span>
+</div>
+</div>
+<!-- Tile 4 -->
+<div class="relative rounded-2xl overflow-hidden bg-slate-900 border border-surface-variant group aspect-[4/3] shadow-[0_8px_20px_rgba(0,104,121,0.08)]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Aggressive front view of electric motorcycle with predatory twin-lens LED projector headlights and integrated aerodynamic carbon fiber downforce winglets glowing cyan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDegN-_UIJ1B2lwQH_HW-yTQ61Q8LZbVwHVdYl8R5gtu5rKfRhGqxotj2Axo3BrEIQoRN0IUeiM_kPeK0weXcmgRdk9I6mgeVyzYMJ-HRmj_GtAFtAQdW7_T_Rfcr_sK2SHIfPsLhLL1X3bBpUoOIF3zDTNhq0FdRIfQ86ynDO2f0fnZmJZZzfYD4kbIuvVhzxZILr8n-TJCJYTX8jcBedtViW4Nug4CrPY0l3JWBtua9MqB6cyI93yoQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-sm text-label-sm uppercase text-white font-bold tracking-wider drop-shadow">Twin Vector LED Headlight Signature</span>
+</div>
+</div>
+<!-- Tile 5 -->
+<div class="relative rounded-2xl overflow-hidden bg-slate-900 border border-surface-variant group aspect-[4/3] shadow-[0_8px_20px_rgba(0,104,121,0.08)]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sculpted aerodynamic rear tail section of electric superbike with aerodynamic hollow tunnels and a minimalist thin horizontal neon cyan tail light blade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFfW7SdNZLGzVO9ayBjKRYw2EIicamiF7-5il17WoMBBHdarGbiyrxLLoVLDPMKM_KUPtw6MKvELjr6C_42r0VnqRgQWhwUDc5IT_rlyLm0rcBBPf1xpZwdNZUNNGzytAhPCFw0XluMzfZ3FnO7gOcqQlj6VZdpuPsVPXd1PwXa3tf4vrBTFYCqcSlPrk1xw4u2qb2cPRROE3RjQHnG5X9pz2qyKjL2LxXVQZzz_AAZ-Zq7xS_oj5J3w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-sm text-label-sm uppercase text-white font-bold tracking-wider drop-shadow">Aerodynamic Venturi Tail Blade</span>
+</div>
+</div>
+<!-- Tile 6 -->
+<div class="relative rounded-2xl overflow-hidden bg-slate-900 border border-surface-variant group aspect-[4/3] shadow-[0_8px_20px_rgba(0,104,121,0.08)]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Electric motorcycle wheel rim with integrated cyan LED ring lights and high precision ventilated brake disc clamped by a dark Brembo racing brake caliper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV0GVfTEIcGFZpB1vXQq6QpaxTC-yJmHGG2vordkN04x2jT_aIYt12xIqFMiOQZOFa2LccMlXLzDisSKzPTpdCf5n0IxZDOYmb3LHfOYh6XuW3EV5_9Hd5KSSmDODAPdfBWCeFcVYVzB5sUO7cXLn1RpoWNMvL9CyUt1kEG02ZEfnidXElK0SZNlFDr0PrAloobEtdEJQqQdxVtB1Lp5Tcxlj9Iu68EpOIcSbufDHsKAcCkD3k_1kMTA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-space-md">
+<span class="font-label-sm text-label-sm uppercase text-white font-bold tracking-wider drop-shadow">Forged Magnesium Halo Wheels</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MODELS / PRICING SECTION -->
+<section class="w-full py-space-xl bg-surface-container-low" id="models">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-xl gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold bg-primary-container/15 px-3 py-1 rounded-full">Choose Your Thrill</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Three Distinct Configurations</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Engineered for uncompromising street capability and unchecked circuit mastery.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-stretch">
+<!-- Standard -->
+<div class="bg-white rounded-3xl p-space-xl flex flex-col justify-between border border-surface-variant shadow-[0_8px_25px_rgba(0,104,121,0.06)] hover:border-primary-container hover:shadow-[0_12px_32px_rgba(0,194,224,0.14)] transition-all">
+<div class="flex flex-col gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Entry Hypersport</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1 font-bold">R1 Standard</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-headline-lg font-headline-lg text-on-surface font-extrabold">$28,500</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">USD</span>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>180 HP Direct Drive Motor</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>350 km WLTP Estimated Range</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>Manual Adjustable Öhlins Shocks</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>7-inch CyberOS Telemetry Dashboard</span>
+</div>
+</div>
+</div>
+<button class="mt-space-xl w-full h-12 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md font-bold uppercase tracking-wider border border-surface-variant hover:bg-primary-container/15 hover:border-primary-container hover:text-primary transition-all">
+            Configure Standard
+          </button>
+</div>
+<!-- Pro (Featured) -->
+<div class="bg-gradient-to-b from-white via-surface-container to-white rounded-3xl p-space-xl flex flex-col justify-between relative border-2 border-primary-container shadow-[0_16px_40px_rgba(0,194,224,0.22)] scale-[1.02]">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-primary to-primary-container text-white font-label-sm text-label-sm uppercase font-bold tracking-widest shadow-md">
+            Most Popular
+          </div>
+<div class="flex flex-col gap-space-md pt-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Track-Tuned Flagship</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1 font-bold">R1 Pro</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-headline-lg font-headline-lg text-primary font-extrabold">$34,900</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">USD</span>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>220 HP High-Output Dual Inverter</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>400 km WLTP Extended Range Pack</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>Adaptive Öhlins Smart EC 3.0 Suspension</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md font-medium">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span>Full Carbon Aerodynamic Downforce Winglets</span>
+</div>
+</div>
+</div>
+<button class="mt-space-xl w-full h-12 rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-label-md text-label-md uppercase font-bold tracking-wider shadow-[0_8px_24px_rgba(0,194,224,0.4)] hover:shadow-[0_12px_32px_rgba(0,194,224,0.6)] hover:scale-[1.01] transition-all">
+            Pre-Order Pro
+          </button>
+</div>
+<!-- Limited Edition -->
+<div class="bg-white rounded-3xl p-space-xl flex flex-col justify-between border border-surface-variant shadow-[0_8px_25px_rgba(0,104,121,0.06)] hover:border-amber-400 hover:shadow-[0_12px_32px_rgba(245,158,11,0.12)] transition-all">
+<div class="flex flex-col gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-amber-600 font-bold">Numbered Collector Series</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1 font-bold">R1 Limited</h3>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-headline-lg font-headline-lg text-on-surface font-extrabold">$42,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">USD (100 Units)</span>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-amber-500 text-[20px]">verified</span>
+<span>250 HP Unlocked Track Specification</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-amber-500 text-[20px]">verified</span>
+<span>Full Forged Carbon Bodywork &amp; Rims</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-amber-500 text-[20px]">verified</span>
+<span>Brembo Racing GP4 Monobloc Calipers</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-amber-500 text-[20px]">verified</span>
+<span>Tailored Dainese Leathers &amp; Track Pass</span>
+</div>
+</div>
+</div>
+<button class="mt-space-xl w-full h-12 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md font-bold uppercase tracking-wider border border-surface-variant hover:border-amber-400 hover:bg-amber-50/50 hover:text-amber-700 transition-all">
+            Reserve Limited
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS SECTION -->
+<section class="w-full py-space-xl bg-background">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-xl gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold bg-primary-container/15 px-3 py-1 rounded-full">From The Track</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Paddock Impressions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">What professional riders and automotive journalists experience behind the bars.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Quote 1 -->
+<div class="bg-white rounded-2xl p-space-lg flex flex-col justify-between gap-space-lg border border-surface-variant shadow-[0_8px_20px_rgba(0,104,121,0.06)] hover:border-primary-container hover:shadow-[0_12px_28px_rgba(0,194,224,0.12)] transition-all">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+            "The acceleration is supernatural. There is no shift delay, no vibration—just pure, instantaneous catapult acceleration that rewires your brain on corner exits."
+          </p>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-surface-variant/60">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center text-white font-bold font-headline-sm text-sm shadow-sm">
+              MV
+            </div>
+<div>
+<div class="font-headline-sm text-[15px] font-bold text-on-surface">Marco Vance</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">MotoGP Test Rider &amp; Moto Editor</div>
+</div>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="bg-white rounded-2xl p-space-lg flex flex-col justify-between gap-space-lg border border-surface-variant shadow-[0_8px_20px_rgba(0,104,121,0.06)] hover:border-primary-container hover:shadow-[0_12px_28px_rgba(0,194,224,0.12)] transition-all">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+            "VOLTRA has done what legacy manufacturers deemed impossible: built an electric superbike that genuinely corners sharper than an Italian liter-bike."
+          </p>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-surface-variant/60">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center text-white font-bold font-headline-sm text-sm shadow-sm">
+              ER
+            </div>
+<div>
+<div class="font-headline-sm text-[15px] font-bold text-on-surface">Elena Rostova</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">EV Performance Specialist &amp; Race Engineer</div>
+</div>
+</div>
+</div>
+<!-- Quote 3 -->
+<div class="bg-white rounded-2xl p-space-lg flex flex-col justify-between gap-space-lg border border-surface-variant shadow-[0_8px_20px_rgba(0,104,121,0.06)] hover:border-primary-container hover:shadow-[0_12px_28px_rgba(0,194,224,0.12)] transition-all">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+            "Silent, deadly, and breathtakingly gorgeous. The fit, finish, and electronic telemetry interface make everything else on two wheels feel ten years old."
+          </p>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-surface-variant/60">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center text-white font-bold font-headline-sm text-sm shadow-sm">
+              JT
+            </div>
+<div>
+<div class="font-headline-sm text-[15px] font-bold text-on-surface">Julian Thorne</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Superbike Quarterly Lead Editor</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA BANNER SECTION -->
+<section class="w-full py-space-xl bg-surface-container-low" id="contact">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter">
+<div class="relative rounded-3xl bg-gradient-to-br from-white via-surface-container to-white p-space-xl overflow-hidden border-2 border-primary-container/40 shadow-[0_16px_40px_rgba(0,194,224,0.12)]">
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -top-20 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-2xl flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-primary-container/15 text-primary w-fit font-label-sm text-label-sm font-bold uppercase tracking-wider">Priority Access 2026</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+            Ready to Ride the Future?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Join an exclusive circle of riders redefining speed. Pre-order deliveries begin Q2 2026 worldwide.
+          </p>
+<form class="flex flex-col sm:flex-row gap-space-xs mt-space-sm w-full max-w-md" onsubmit="event.preventDefault();">
+<input class="h-12 px-space-md rounded-xl bg-white border border-surface-variant text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-transparent flex-grow shadow-sm" placeholder="Enter your email address..." required="" type="email"/>
+<button class="h-12 px-space-lg rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-label-md text-label-md uppercase font-bold tracking-wider shadow-[0_6px_20px_rgba(0,194,224,0.35)] hover:shadow-[0_8px_28px_rgba(0,194,224,0.55)] hover:scale-[1.02] transition-all shrink-0" type="submit">
+              Notify Me
+            </button>
+</form>
+<div class="flex items-center gap-space-xs pt-space-xs text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">verified_user</span>
+<span>Fully refundable $500 deposit • Priority delivery slot • VIP Track Experience included</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-white text-on-surface py-space-xl border-t border-surface-variant"><div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center text-white"><span class="material-symbols-outlined text-[20px]">electric_bolt</span></div><span class="font-headline-md text-headline-sm tracking-wider text-on-surface uppercase font-extrabold">VOLTRA</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">The Next Generation of Electric Hypersport. Engineered for precision telemetry, unmatched torque, and structural elegance.</p><div class="flex items-center gap-space-md pt-space-xs"><a aria-label="Social Channel" class="w-9 h-9 rounded-lg bg-surface-container border border-surface-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary-container transition-colors shadow-xs" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span></a><a aria-label="Social Channel" class="w-9 h-9 rounded-lg bg-surface-container border border-surface-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary-container transition-colors shadow-xs" href="#"><span class="material-symbols-outlined text-[18px]">camera</span></a><a aria-label="Social Channel" class="w-9 h-9 rounded-lg bg-surface-container border border-surface-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary-container transition-colors shadow-xs" href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a><a aria-label="Social Channel" class="w-9 h-9 rounded-lg bg-surface-container border border-surface-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary-container transition-colors shadow-xs" href="#"><span class="material-symbols-outlined text-[18px]">share</span></a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Models</span><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="r1-standard" href="#">R1 Standard</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="r1-pro" href="#">R1 Pro</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="r1-limited" href="#">R1 Limited</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="configurator" href="#">Configurator</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Technology</span><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="hyperdrive-motor" href="#">HyperDrive Motor</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="cyberos-telemetry" href="#">CyberOS Telemetry</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="rapidcharge" href="#">RapidCharge</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="carbon-monocoque" href="#">Carbon Monocoque</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Company</span><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="about-voltra" href="#">About VOLTRA</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="press" href="#">Press</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="support" href="#">Support</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Contact</a></div></div><div class="pt-space-lg border-t border-surface-variant/80 flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-left"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 VOLTRA Motors Inc. All rights reserved. Designed for speed, engineered for silence.</p><div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" href="#">Terms of Service</a><a class="hover:text-primary transition-colors" href="#">Telemetry Disclaimer</a></div></div></div></footer></body></html>
